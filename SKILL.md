@@ -1,7 +1,7 @@
 ---
 
-name: mingyue-design-system
-description: 明月Moon设计系统。用于个人品牌网站、知识库、作品集、AI产品、活动页、教程页、小红书图文等内容的统一设计语言。
+name:mingyue-design-system
+description:明月Moon设计系统。用于个人品牌网站、知识库、作品集、AI产品、活动页、教程页、小红书图文等内容的统一设计语言。
 ----------------------------------------------------------------------
 
 # 明月Moon Design System

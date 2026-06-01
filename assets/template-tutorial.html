@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><!-- 页面标题 --></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
-  <style>
-    /* === CSS变量 === */
-    :root {
-     
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>明月Moon Tutorial Template</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;1,400&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =================================
+Brand DNA
+================================= */
+
+:root{
+
 --blue:#2F4156;
 --blue-soft:#708A9A;
 
@@ -27,211 +35,735 @@
 --ink-faint:#9AA5AE;
 
 --dark-panel:#243240;
-    }
 
-    /* === Reset === */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+}
 
-    body {
-      font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--ink);
-      background: var(--cream);
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    ::selection {
-      background: var(--yellow);
-      color: var(--ink);
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+body{
 
-    /* === Hero Section === */
-    /* 替换为适合的Hero布局（参见layouts.md） */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 0.6fr;
-      align-items: center;
-      gap: 48px;
-      padding: 6rem 2rem 4rem;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
+font-family:
+'Noto Sans SC',
+sans-serif;
 
-    .hero h1 {
-      font-family: 'Noto Serif SC', serif;
-      font-weight: 900;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      line-height: 1.15;
-    }
+background:
+radial-gradient(
+circle at top,
+#faf8f3,
+#F5F1EB
+);
 
-    .hero p {
-      font-size: 1.05rem;
-      color: var(--ink-light);
-      margin-top: 1.5rem;
-      max-width: 540px;
-    }
+color:var(--ink);
 
-    .label-caps {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-weight: 500;
-      color: var(--ink-faint);
-      display: block;
-      margin-bottom: 0.75rem;
-    }
+line-height:1.9;
 
-    /* === Content Sections === */
-    /* 每个section使用不同布局（参见layouts.md） */
-    .section {
-      padding: clamp(80px, 12vh, 160px) 0;
-    }
+overflow-x:hidden;
 
-    .section--alt {
-      background: var(--cream-dark);
-    }
+}
 
-    .section-header {
-      margin-bottom: clamp(40px, 6vw, 80px);
-    }
+::selection{
 
-    .section-number {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--blue);
-      opacity: 0.3;
-      display: block;
-      margin-bottom: 0.25rem;
-    }
+background:var(--gold);
+color:white;
 
-    .section-title {
-      font-family: 'Noto Serif SC', serif;
-      font-weight: 900;
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
-    }
+}
 
-    /* === 卡片 === */
-    .feature-card {
-      background: var(--cream-dark);
-      border-radius: 16px;
-      padding: clamp(24px, 3vw, 36px);
-      border-left: 4px solid var(--yellow);
-      transition: transform 0.3s ease;
-    }
-    .feature-card:hover { transform: translateY(-4px); }
+img{
 
-    /* === Scroll Reveal === */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-d1 { transition-delay: 0.1s; }
-    .reveal-d2 { transition-delay: 0.2s; }
-    .reveal-d3 { transition-delay: 0.3s; }
-    .reveal-d4 { transition-delay: 0.4s; }
-    .reveal-d5 { transition-delay: 0.5s; }
+display:block;
+width:100%;
 
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
+}
 
-    /* === 响应式 === */
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 4rem 1.5rem 3rem;
-      }
-    }
+.container{
 
-    @media (max-width: 600px) {
-      body { font-size: 15px; }
-    }
-  </style>
+max-width:1280px;
+margin:auto;
+padding:0 2rem;
+
+}
+
+.label{
+
+font-size:.75rem;
+
+letter-spacing:.2em;
+
+text-transform:uppercase;
+
+color:var(--ink-light);
+
+display:inline-block;
+
+margin-bottom:1rem;
+
+font-family:
+'Fraunces',
+serif;
+
+}
+
+/* =================================
+Hero
+================================= */
+
+.hero{
+
+min-height:100vh;
+
+display:grid;
+
+grid-template-columns:
+0.45fr 0.55fr;
+
+gap:80px;
+
+align-items:center;
+
+max-width:1400px;
+
+margin:auto;
+
+padding:6rem 3rem;
+
+}
+
+.hero h1{
+
+font-family:
+'Noto Serif SC',
+serif;
+
+font-size:
+clamp(3rem,7vw,6rem);
+
+line-height:1.1;
+
+margin-bottom:2rem;
+
+color:var(--blue);
+
+}
+
+.hero p{
+
+font-size:1.05rem;
+
+max-width:32ch;
+
+color:var(--ink-light);
+
+}
+
+.hero-image{
+
+position:relative;
+
+}
+
+.hero-image img{
+
+border-radius:28px;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.12);
+
+}
+
+.float-card{
+
+position:absolute;
+
+background:white;
+
+padding:.8rem 1rem;
+
+border-radius:999px;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.08);
+
+font-size:.85rem;
+
+}
+
+.card-1{
+
+top:20px;
+left:-20px;
+
+}
+
+.card-2{
+
+bottom:20px;
+right:-20px;
+
+}
+
+/* =================================
+Intro
+================================= */
+
+.intro{
+
+padding:
+clamp(80px,12vh,160px)
+0;
+
+}
+
+.intro-box{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.intro-box h2{
+
+font-family:
+'Noto Serif SC',
+serif;
+
+font-size:
+clamp(2rem,4vw,3rem);
+
+margin-bottom:1.5rem;
+
+}
+
+.intro-box p{
+
+font-size:1.1rem;
+
+color:var(--ink-light);
+
+}
+
+/* =================================
+Section
+================================= */
+
+.section{
+
+padding:
+clamp(80px,12vh,160px)
+0;
+
+}
+
+.section-alt{
+
+background:var(--cream-dark);
+
+}
+
+.section-grid{
+
+display:grid;
+
+grid-template-columns:
+180px 1fr;
+
+gap:60px;
+
+}
+
+.section-number{
+
+font-size:7rem;
+
+opacity:.08;
+
+font-family:
+'Fraunces',
+serif;
+
+position:sticky;
+
+top:120px;
+
+height:max-content;
+
+}
+
+.section-content h2{
+
+font-family:
+'Noto Serif SC',
+serif;
+
+font-size:
+clamp(1.8rem,3vw,2.8rem);
+
+margin-bottom:2rem;
+
+}
+
+.section-content p{
+
+max-width:720px;
+
+}
+
+/* =================================
+Cards
+================================= */
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:24px;
+
+margin-top:3rem;
+
+}
+
+.feature-card{
+
+background:white;
+
+border-left:
+4px solid var(--gold);
+
+border-radius:20px;
+
+padding:2rem;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
+
+transition:.3s;
+
+}
+
+.feature-card:hover{
+
+transform:
+translateY(-4px);
+
+}
+
+.feature-card h3{
+
+margin-bottom:1rem;
+
+font-family:
+'Noto Serif SC',
+serif;
+
+}
+
+/* =================================
+Quote Panel
+================================= */
+
+.quote{
+
+background:var(--dark-panel);
+
+color:white;
+
+padding:
+clamp(100px,14vh,180px)
+2rem;
+
+text-align:center;
+
+}
+
+.quote p{
+
+max-width:900px;
+
+margin:auto;
+
+font-family:
+'Noto Serif SC',
+serif;
+
+font-size:
+clamp(1.8rem,4vw,3rem);
+
+line-height:1.7;
+
+}
+
+/* =================================
+CTA
+================================= */
+
+.cta{
+
+padding:
+clamp(80px,12vh,160px)
+0;
+
+}
+
+.cta-box{
+
+background:white;
+
+border-radius:24px;
+
+padding:
+clamp(40px,6vw,80px);
+
+text-align:center;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.cta-box h2{
+
+font-family:
+'Noto Serif SC',
+serif;
+
+font-size:
+clamp(2rem,4vw,3rem);
+
+margin-bottom:1rem;
+
+}
+
+.cta-box p{
+
+margin-bottom:2rem;
+
+color:var(--ink-light);
+
+}
+
+.cta-btn{
+
+display:inline-block;
+
+padding:
+14px 32px;
+
+background:var(--blue);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:999px;
+
+transition:.3s;
+
+}
+
+.cta-btn:hover{
+
+transform:
+translateY(-2px);
+
+}
+
+/* =================================
+Footer
+================================= */
+
+footer{
+
+padding:80px 2rem;
+
+text-align:center;
+
+color:var(--ink-light);
+
+}
+
+footer strong{
+
+display:block;
+
+font-family:
+'Noto Serif SC',
+serif;
+
+font-size:1.2rem;
+
+margin-bottom:.5rem;
+
+color:var(--blue);
+
+}
+
+/* =================================
+Reveal
+================================= */
+
+.reveal{
+
+opacity:0;
+
+transform:
+translateY(40px);
+
+transition:
+all .8s cubic-bezier(
+0.16,1,0.3,1);
+
+}
+
+.reveal.visible{
+
+opacity:1;
+
+transform:none;
+
+}
+
+/* =================================
+Responsive
+================================= */
+
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+padding:4rem 1.5rem;
+
+}
+
+.section-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section-number{
+
+position:static;
+
+font-size:4rem;
+
+}
+
+.card-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.float-card{
+
+display:none;
+
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- ====== HERO ====== -->
-  <!-- 从layouts.md选择合适的Hero布局 -->
-  <section class="hero">
-    <div class="hero-text">
-      <span class="label-caps"><!-- 分类标签 --></span>
-      <h1><!-- 主标题 --></h1>
-      <p><!-- 副标题/描述 --></p>
-    </div>
-    <div class="hero-visual">
-      <!-- 视觉元素：图片/装饰/IP形象 -->
-    </div>
-  </section>
+<section class="hero">
 
-  <!-- ====== SECTION 1 ====== -->
-  <!-- 选择不同于Hero的布局（如Sticky侧栏/Step流程/卡片网格） -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-number">01</span>
-        <h2 class="section-title"><!-- Section标题 --></h2>
-      </div>
-      <div class="reveal reveal-d1">
-        <!-- Section内容 -->
-      </div>
-    </div>
-  </section>
+<div>
 
-  <!-- ====== SECTION 2 ====== -->
-  <!-- 选择另一种不同布局 -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-number">02</span>
-        <h2 class="section-title"><!-- Section标题 --></h2>
-      </div>
-      <div class="reveal reveal-d1">
-        <!-- Section内容 -->
-      </div>
-    </div>
-  </section>
+<span class="label">
+GITHUB GUIDE
+</span>
 
-  <!-- ====== SECTION 3 ====== -->
-  <!-- 可选：深色面板打破节奏 -->
-  <section class="section" style="background: var(--dark-panel); color: #e2e8f0;">
-    <div class="container">
-      <div class="reveal">
-        <!-- 重点内容/引用 -->
-      </div>
-    </div>
-  </section>
+<h1>
+为什么设计师
+也应该学 GitHub？
+</h1>
 
-  <!-- ====== FOOTER ====== -->
-  <footer class="section" style="padding: clamp(40px, 6vh, 80px) 0; text-align: center;">
-    <div class="container">
-      <p style="font-size: 0.85rem; color: var(--ink-faint);"><!-- 底部信息 --></p>
-    </div>
-  </footer>
+<p>
+真正有价值的不是工具，
+而是把自己的知识、
+作品与思考沉淀为数字资产。
+</p>
 
-  <!-- ====== Scroll Reveal JS ====== -->
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
+</div>
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200">
+
+<div class="float-card card-1">
+知识资产
+</div>
+
+<div class="float-card card-2">
+长期主义
+</div>
+
+</div>
+
+</section>
+
+<section class="intro reveal">
+
+<div class="container">
+
+<div class="intro-box">
+
+<h2>
+GitHub 不只是程序员的网站
+</h2>
+
+<p>
+它更像一个公开的知识仓库，
+帮助你保存作品、记录成长、
+建立属于自己的数字花园。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section reveal">
+
+<div class="container">
+
+<div class="section-grid">
+
+<div class="section-number">
+01
+</div>
+
+<div class="section-content">
+
+<h2>
+为什么值得学习
+</h2>
+
+<p>
+当内容平台不断变化，
+真正属于你的资产，
+应该保存在自己能够掌控的地方。
+</p>
+
+<div class="card-grid">
+
+<div class="feature-card">
+<h3>内容沉淀</h3>
+<p>所有文章长期保存。</p>
+</div>
+
+<div class="feature-card">
+<h3>作品管理</h3>
+<p>统一管理设计项目。</p>
+</div>
+
+<div class="feature-card">
+<h3>个人品牌</h3>
+<p>建立公开成长档案。</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+<p>
+真正需要保存的，
+不是文件。
+
+而是你的思考过程。
+</p>
+
+</section>
+
+<section class="cta reveal">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+开始你的第一个仓库
+</h2>
+
+<p>
+从今天开始积累自己的数字资产。
+</p>
+
+<a href="#" class="cta-btn">
+开始实践
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<strong>
+明月Moon
+</strong>
+
+东方美学 × 长期主义 × 数字花园
+
+</footer>
+
+<script>
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('visible');
+
+}
+
+});
+
+},
+
+{threshold:0.12}
+
+);
+
+document
+.querySelectorAll('.reveal')
+.forEach(el=>observer.observe(el));
+
+</script>
+
 </body>
 </html>

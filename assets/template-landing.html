@@ -1,308 +1,801 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><!-- 活动标题 --></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Caveat:wght@400;700&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* === CSS变量 === */
-    :root {
-      --blue: #2B7FD8;
-      --blue-deep: #1E5BA8;
-      --yellow: #F4D758;
-      --yellow-soft: #FFF3CD;
-      --red: #E84A5F;
-      --cream: #fefcf6;
-      --cream-dark: #faf6eb;
-      --ink: #1A1A2E;
-      --ink-light: #4A4A5A;
-      --ink-faint: #8A8A9A;
-      --dark-panel: #151821;
-      /* 合作品牌色（按需启用） */
-      /* --partner: #F1752D; */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<title>设计师如何利用 AI 建立个人品牌｜明月Moon</title>
 
-    body {
-      font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--ink);
-      background: var(--cream);
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    ::selection {
-      background: var(--yellow);
-      color: var(--ink);
-    }
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;1,400&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+<style>
 
-    /* === HERO 全屏 === */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
-      text-align: center;
-      position: relative;
-    }
+:root{
 
-    .hero h1 {
-      font-family: 'Noto Serif SC', serif;
-      font-weight: 900;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-    }
+--blue:#2F4156;
+--blue-soft:#708A9A;
 
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--ink-light);
-      max-width: 600px;
-    }
+--paper:#F5F1EB;
+--paper-dark:#ECE7DE;
 
-    .hero .label-caps {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-weight: 500;
-      color: var(--ink-faint);
-      margin-bottom: 1rem;
-    }
+--gold:#B89B6C;
 
-    /* === 三栏Section === */
-    .section { padding: clamp(80px, 12vh, 160px) 0; }
-    .section--alt { background: var(--cream-dark); }
+--red:#A5503A;
 
-    .section-header {
-      margin-bottom: clamp(40px, 6vw, 80px);
-    }
+--green:#6E7D61;
 
-    .section-number {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      color: var(--blue);
-      opacity: 0.3;
-      display: block;
-      margin-bottom: 0.25rem;
-    }
+--ink:#2F4156;
+--ink-light:#708A9A;
 
-    .section-title {
-      font-family: 'Noto Serif SC', serif;
-      font-weight: 900;
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
-    }
+--dark:#151821;
 
-    .three-col {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(20px, 2.5vw, 32px);
-    }
+}
 
-    .chair-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: clamp(24px, 3vw, 36px);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,.06);
-    }
-    .chair-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-    }
-    .chair-card:nth-child(1)::before { background: var(--blue); }
-    .chair-card:nth-child(2)::before { background: var(--yellow); }
-    .chair-card:nth-child(3)::before { background: var(--red); }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    /* === 深色面板 === */
-    .dark-section {
-      background: var(--dark-panel);
-      color: #e2e8f0;
-      padding: clamp(80px, 12vh, 160px) 0;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    .dark-section .quote-text {
-      font-family: 'Noto Serif SC', serif;
-      font-size: clamp(1.3rem, 3vw, 2rem);
-      font-weight: 700;
-      line-height: 1.8;
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .dark-section .quote-text em {
-      color: var(--yellow);
-      font-style: normal;
-    }
+body{
 
-    /* === Pull Quote === */
-    .viral-pullquote {
-      padding: 36px 40px;
-      background: var(--cream);
-      border-radius: 16px;
-      border: 2px solid var(--yellow);
-      position: relative;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .viral-pullquote::before {
-      content: '"';
-      font-family: 'Fraunces', serif;
-      font-size: 5rem;
-      color: var(--yellow);
-      position: absolute;
-      top: -10px; left: 20px;
-      opacity: 0.5;
-      line-height: 1;
-    }
-    .viral-pullquote p {
-      font-family: 'Noto Serif SC', serif;
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      font-weight: 700;
-      line-height: 1.8;
-    }
+font-family:'Noto Sans SC',sans-serif;
 
-    /* === CTA === */
-    .cta-section {
-      text-align: center;
-      padding: clamp(80px, 12vh, 160px) 2rem;
-    }
-    .cta-section h2 {
-      font-family: 'Noto Serif SC', serif;
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
-      margin-bottom: 1rem;
-    }
-    .cta-section p {
-      font-size: 1rem;
-      color: var(--ink-light);
-      margin-bottom: 2rem;
-    }
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 16px 36px;
-      background: var(--blue);
-      color: #fff;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(43,127,216,0.3);
-    }
+background:
+radial-gradient(
+circle at top,
+#faf8f4,
+var(--paper)
+);
 
-    /* === Scroll Reveal === */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-d1 { transition-delay: 0.1s; }
-    .reveal-d2 { transition-delay: 0.2s; }
-    .reveal-d3 { transition-delay: 0.3s; }
+color:var(--ink);
 
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
+line-height:1.8;
 
-    /* === 响应式 === */
-    @media (max-width: 900px) {
-      .hero { min-height: auto; padding: 4rem 1.5rem; }
-      .three-col { grid-template-columns: 1fr; }
-      .cta-button { width: 100%; justify-content: center; }
-    }
+overflow-x:hidden;
 
-    @media (max-width: 600px) {
-      body { font-size: 15px; }
-    }
-  </style>
+}
+
+.container{
+
+max-width:1280px;
+margin:auto;
+padding:0 2rem;
+
+}
+
+img{
+display:block;
+width:100%;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+padding:4rem 2rem;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:900px;
+height:900px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(184,155,108,.15),
+transparent 70%
+);
+
+}
+
+.hero-inner{
+
+position:relative;
+z-index:2;
+
+max-width:900px;
+
+}
+
+.hero-label{
+
+display:inline-block;
+
+font-size:.8rem;
+
+letter-spacing:.2em;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:1rem;
+
+}
+
+.hero h1{
+
+font-family:'Noto Serif SC',serif;
+
+font-size:
+clamp(3rem,8vw,6rem);
+
+line-height:1.15;
+
+margin-bottom:1.5rem;
+
+color:var(--blue);
+
+}
+
+.hero p{
+
+font-size:1.1rem;
+
+max-width:700px;
+
+margin:auto;
+
+color:var(--ink-light);
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:1rem;
+
+margin-top:3rem;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:16px 34px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-primary{
+
+background:var(--blue);
+
+color:white;
+
+}
+
+.btn-secondary{
+
+border:1px solid var(--gold);
+
+color:var(--blue);
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* ---------------- VALUE ---------------- */
+
+.value{
+
+padding:140px 0;
+
+}
+
+.section-title{
+
+font-family:'Noto Serif SC',serif;
+
+font-size:
+clamp(2rem,4vw,3rem);
+
+text-align:center;
+
+margin-bottom:4rem;
+
+}
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:24px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:24px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:
+translateY(-4px);
+
+}
+
+.card h3{
+
+font-family:'Noto Serif SC',serif;
+
+margin-bottom:1rem;
+
+}
+
+.card p{
+
+color:var(--ink-light);
+
+}
+
+/* ---------------- QUOTE ---------------- */
+
+.quote{
+
+background:var(--dark);
+
+color:white;
+
+padding:160px 2rem;
+
+text-align:center;
+
+}
+
+.quote p{
+
+max-width:900px;
+
+margin:auto;
+
+font-family:'Noto Serif SC',serif;
+
+font-size:
+clamp(2rem,5vw,4rem);
+
+line-height:1.7;
+
+}
+
+/* ---------------- TIMELINE ---------------- */
+
+.timeline{
+
+padding:140px 0;
+
+}
+
+.timeline-title{
+
+text-align:center;
+
+margin-bottom:5rem;
+
+}
+
+.timeline-title h2{
+
+font-family:'Noto Serif SC',serif;
+
+font-size:
+clamp(2rem,4vw,3rem);
+
+}
+
+.timeline-item{
+
+display:grid;
+
+grid-template-columns:
+140px 1fr;
+
+gap:40px;
+
+margin-bottom:60px;
+
+}
+
+.time{
+
+font-family:'Fraunces',serif;
+
+font-size:2rem;
+
+color:var(--gold);
+
+}
+
+.timeline-content{
+
+background:white;
+
+padding:32px;
+
+border-radius:20px;
+
+box-shadow:
+0 8px 24px rgba(0,0,0,.04);
+
+}
+
+.timeline-content h3{
+
+font-family:'Noto Serif SC',serif;
+
+margin-bottom:1rem;
+
+}
+
+/* ---------------- SPEAKER ---------------- */
+
+.speaker{
+
+background:var(--paper-dark);
+
+padding:140px 0;
+
+}
+
+.speaker-box{
+
+display:grid;
+
+grid-template-columns:
+320px 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.avatar{
+
+width:320px;
+height:320px;
+
+overflow:hidden;
+
+border-radius:50%;
+
+}
+
+.avatar img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+.speaker-content h2{
+
+font-family:'Noto Serif SC',serif;
+
+font-size:
+clamp(2rem,4vw,3rem);
+
+margin-bottom:1rem;
+
+}
+
+.speaker-content p{
+
+color:var(--ink-light);
+
+}
+
+/* ---------------- CTA ---------------- */
+
+.cta{
+
+padding:160px 0;
+
+}
+
+.cta-panel{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:80px;
+
+border-radius:32px;
+
+text-align:center;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.05);
+
+}
+
+.cta-panel h2{
+
+font-family:'Noto Serif SC',serif;
+
+font-size:
+clamp(2rem,4vw,3rem);
+
+margin-bottom:1rem;
+
+}
+
+.cta-panel p{
+
+margin-bottom:2rem;
+
+color:var(--ink-light);
+
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+
+padding:80px 2rem;
+
+text-align:center;
+
+}
+
+footer strong{
+
+display:block;
+
+font-family:'Noto Serif SC',serif;
+
+font-size:1.2rem;
+
+margin-bottom:.5rem;
+
+color:var(--blue);
+
+}
+
+footer p{
+
+color:var(--ink-light);
+
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:900px){
+
+.card-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline-item{
+
+grid-template-columns:1fr;
+
+}
+
+.speaker-box{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.avatar{
+
+margin:auto;
+
+width:220px;
+height:220px;
+
+}
+
+.hero{
+
+padding:3rem 1.5rem;
+
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- ====== HERO 全屏 ====== -->
-  <section class="hero">
-    <span class="label-caps"><!-- 活动类型/日期 --></span>
-    <h1><!-- 活动主标题 --></h1>
-    <p><!-- 活动副标题/一句话描述 --></p>
-  </section>
+<section class="hero">
 
-  <!-- ====== 三栏亮点 ====== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-number">01</span>
-        <h2 class="section-title"><!-- 亮点/嘉宾/核心价值 --></h2>
-      </div>
-      <div class="three-col">
-        <div class="chair-card reveal reveal-d1">
-          <!-- 卡片1内容 -->
-        </div>
-        <div class="chair-card reveal reveal-d2">
-          <!-- 卡片2内容 -->
-        </div>
-        <div class="chair-card reveal reveal-d3">
-          <!-- 卡片3内容 -->
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="hero-inner">
 
-  <!-- ====== 深色面板（金句/核心观点） ====== -->
-  <section class="dark-section">
-    <div class="container reveal">
-      <p class="quote-text"><!-- 引用的 <em>重点词</em> 内容 --></p>
-    </div>
-  </section>
+<div class="hero-label">
+MOON SHARING SESSION
+</div>
 
-  <!-- ====== Pull Quote ====== -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="viral-pullquote reveal">
-        <p><!-- 核心金句 --></p>
-      </div>
-    </div>
-  </section>
+<h1>
+设计师如何利用 AI<br>
+建立个人品牌
+</h1>
 
-  <!-- ====== CTA行动区 ====== -->
-  <section class="cta-section">
-    <h2 class="reveal"><!-- 行动号召标题 --></h2>
-    <p class="reveal reveal-d1"><!-- 行动描述 --></p>
-    <a href="#" class="cta-button reveal reveal-d2"><!-- 按钮文案 --></a>
-  </section>
+<p>
+从作品集、GitHub、Obsidian 到小红书，
+分享如何利用 AI 建立属于自己的内容系统与数字资产。
+</p>
 
-  <!-- ====== Scroll Reveal JS ====== -->
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
+<div class="hero-buttons">
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+<a href="#" class="btn btn-primary">
+立即报名
+</a>
+
+<a href="#" class="btn btn-secondary">
+了解详情
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="value">
+
+<div class="container">
+
+<h2 class="section-title">
+你将获得什么？
+</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<h3>品牌定位</h3>
+<p>
+找到适合自己的长期表达方向，
+而不是盲目跟风热点。
+</p>
+</div>
+
+<div class="card">
+<h3>内容系统</h3>
+<p>
+建立从选题、写作、配图到发布的完整工作流。
+</p>
+</div>
+
+<div class="card">
+<h3>数字资产</h3>
+<p>
+让你的内容不断沉淀，
+形成长期价值。
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+<p>
+不要只经营账号，
+而是经营属于自己的数字资产。
+</p>
+
+</section>
+
+<section class="timeline">
+
+<div class="container">
+
+<div class="timeline-title">
+
+<h2>
+分享流程
+</h2>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="time">
+19:00
+</div>
+
+<div class="timeline-content">
+
+<h3>为什么设计师需要个人品牌</h3>
+
+<p>
+理解品牌的本质，
+建立长期价值积累的思维。
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="time">
+19:40
+</div>
+
+<div class="timeline-content">
+
+<h3>AI 内容工作流</h3>
+
+<p>
+选题 → 文案 → 图片 → 发布 → 数据复盘
+完整拆解。
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="time">
+20:20
+</div>
+
+<div class="timeline-content">
+
+<h3>实战案例</h3>
+
+<p>
+从零搭建一个可持续运营的个人品牌账号。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="speaker">
+
+<div class="container">
+
+<div class="speaker-box">
+
+<div class="avatar">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800" alt="speaker">
+
+</div>
+
+<div class="speaker-content">
+
+<h2>
+明月Moon
+</h2>
+
+<p>
+设计师 / AI创作者
+
+专注于东方美学表达、数字资产建设与个人品牌成长。
+
+帮助创作者建立长期主义的内容系统。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-panel">
+
+<h2>
+加入这场分享
+</h2>
+
+<p>
+用一个晚上，
+搭建属于你的 AI 内容工作流。
+</p>
+
+<a href="#" class="btn btn-primary">
+立即报名
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<strong>
+明月Moon
+</strong>
+
+<p>
+东方美学 × 长期主义 × 创作者成长
+</p>
+
+</footer>
+
 </body>
 </html>

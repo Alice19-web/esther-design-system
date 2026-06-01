@@ -1,5 +1,5 @@
 ---
-name:Moon-design-system
+name:esther-design-system
 description: Moon的个人IP设计系统。做HTML页面、个人网站、教程页面、介绍页面、landing page等任何前端设计时自动触发。包含品牌DNA和多个场景子规范。
 ---
 

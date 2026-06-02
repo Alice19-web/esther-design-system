@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Moon Cards V1 - 明月内容生成器</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;1,400&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<style>
+:root{
+  --primary:#2F4156;
+  --secondary:#708A9A;
+  --paper:#F5F1EB;
+  --paper-dark:#ECE7DE;
+  --gold:#B89B6C;
+  --red:#A5503A;
+  --green:#6E7D61;
+  --ink:#2F4156;
+  --bg:#F5F1EB;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:"Noto Sans SC",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  height:100vh;
+  overflow:hidden;
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:320px 1fr 420px;
+  height:100vh;
+}
+
+/* LEFT */
+.panel{
+  background:white;
+  padding:16px;
+  border-right:1px solid #eee;
+  overflow:auto;
+}
+
+h2{
+  font-size:14px;
+  margin:12px 0 6px;
+  color:var(--secondary);
+}
+
+input,textarea,select{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:13px;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:var(--primary);
+  color:white;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+/* CENTER */
+.center{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg,#faf7f2,#f5f1eb);
+}
+
+.card{
+  width:420px;
+  height:560px;
+  background:white;
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  position:relative;
+}
+
+.tag{
+  font-size:12px;
+  color:var(--gold);
+  letter-spacing:2px;
+}
+
+.title{
+  font-size:28px;
+  font-family:"Noto Serif SC";
+  margin-top:10px;
+  line-height:1.4;
+}
+
+.content{
+  margin-top:16px;
+  font-size:14px;
+  color:#444;
+  line-height:1.7;
+}
+
+.quote{
+  margin-top:20px;
+  padding:12px;
+  border-left:3px solid var(--gold);
+  background:#faf7f2;
+  font-size:13px;
+}
+
+.footer{
+  position:absolute;
+  bottom:18px;
+  left:28px;
+  font-size:12px;
+  color:var(--secondary);
+}
+
+/* RIGHT PREVIEW CONTROL */
+.preview{
+  background:#fff;
+  border-left:1px solid #eee;
+  padding:16px;
+}
+
+.ip{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.ip button{
+  width:auto;
+  padding:6px 10px;
+  font-size:12px;
+  background:#eee;
+  color:#333;
+}
+
+.ip button.active{
+  background:var(--gold);
+  color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- LEFT -->
+<div class="panel">
+<h3>编辑器</h3>
+
+<h2>标题</h2>
+<input id="title" value="文殊菩萨手中的宝剑">
+
+<h2>正文</h2>
+<textarea id="content">很多人以为那是一把武器，其实它象征智慧。</textarea>
+
+<h2>金句</h2>
+<textarea id="quote">智慧不是获得更多，而是放下错误认知。</textarea>
+
+<h2>分类</h2>
+<input id="tag" value="THANGKA">
+
+<h2>作者</h2>
+<input id="author" value="明月Moon">
+
+<h2>IP选择</h2>
+<div class="ip">
+<button onclick="setIP('scholar')" class="active">Moon Scholar</button>
+<button onclick="setIP('cat')">Zen Cat</button>
+<button onclick="setIP('rabbit')">Moon Rabbit</button>
+<button onclick="setIP('artist')">Artist</button>
+</div>
+
+<button onclick="exportPNG()">导出PNG</button>
+
+</div>
+
+<!-- CENTER -->
+<div class="center">
+<div class="card" id="card">
+
+<div class="tag" id="tagText">THANGKA</div>
+
+<div class="title" id="titleText">文殊菩萨手中的宝剑</div>
+
+<div class="content" id="contentText">
+很多人以为那是一把武器，其实它象征智慧。
+</div>
+
+<div class="quote" id="quoteText">
+智慧不是获得更多，而是放下错误认知。
+</div>
+
+<div class="footer" id="authorText">明月Moon</div>
+
+</div>
+</div>
+
+<!-- RIGHT -->
+<div class="preview">
+<h3>IP预览</h3>
+<p>当前：<span id="ipName">Moon Scholar</span></p>
+</div>
+
+</div>
+
+<script>
+
+let currentIP = "scholar";
+
+function sync(){
+document.getElementById("titleText").innerText =
+document.getElementById("title").value;
+
+document.getElementById("contentText").innerText =
+document.getElementById("content").value;
+
+document.getElementById("quoteText").innerText =
+document.getElementById("quote").value;
+
+document.getElementById("tagText").innerText =
+document.getElementById("tag").value;
+
+document.getElementById("authorText").innerText =
+document.getElementById("author").value;
+}
+
+document.querySelectorAll("input,textarea").forEach(el=>{
+el.addEventListener("input",sync);
+});
+
+function setIP(ip){
+currentIP = ip;
+document.querySelectorAll(".ip button").forEach(b=>b.classList.remove("active"));
+event.target.classList.add("active");
+
+const map = {
+scholar:"Moon Scholar",
+cat:"Zen Cat",
+rabbit:"Moon Rabbit",
+artist:"Little Artist"
+};
+
+document.getElementById("ipName").innerText = map[ip];
+}
+
+function exportPNG(){
+html2canvas(document.getElementById("card")).then(canvas=>{
+let a = document.createElement("a");
+a.download="moon-card.png";
+a.href=canvas.toDataURL();
+a.click();
+});
+}
+
+</script>
+
+</body>
+</html>

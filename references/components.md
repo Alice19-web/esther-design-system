@@ -77,7 +77,7 @@
   font-family: 'Fraunces', serif;
   font-size: 5.5rem;
   font-weight: 900;
-  color: rgba(43, 127, 216, 0.08);
+  color: rgba(47, 65, 86, 0.08);
   line-height: 1;
   pointer-events: none;
 }
@@ -98,9 +98,9 @@
 
 **变体**: 编号颜色按品牌三色轮换（蓝/黄/红）
 ```css
-.number-card:nth-child(3n+1) .card-number { color: rgba(43, 127, 216, 0.08); }
-.number-card:nth-child(3n+2) .card-number { color: rgba(244, 215, 88, 0.15); }
-.number-card:nth-child(3n) .card-number { color: rgba(232, 74, 95, 0.1); }
+.number-card:nth-child(3n+1) .card-number { color: rgba(47, 65, 86, 0.08); }
+.number-card:nth-child(3n+2) .card-number { color: rgba(184, 155, 108, 0.15); }
+.number-card:nth-child(3n) .card-number { color: rgba(165, 80, 58, 0.1); }
 ```
 
 ---
@@ -133,9 +133,9 @@
   margin-bottom: 14px;
 }
 /* pill颜色变体 */
-.tag-card .card-pill--blue { background: rgba(43,127,216,0.1); color: var(--blue); }
-.tag-card .card-pill--yellow { background: rgba(244,215,88,0.25); color: #9a8100; }
-.tag-card .card-pill--red { background: rgba(232,74,95,0.1); color: var(--red); }
+.tag-card .card-pill--blue { background: rgba(47,65,86,0.1); color: var(--blue); }
+.tag-card .card-pill--yellow { background: rgba(184,155,108,0.25); color: #8B7645; }
+.tag-card .card-pill--red { background: rgba(165,80,58,0.1); color: var(--red); }
 .tag-card .card-title {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.05rem;
@@ -182,9 +182,9 @@
   font-size: 2.8rem;
 }
 /* icon区颜色变体 */
-.icon-card .card-icon-area--blue { background: rgba(43,127,216,0.06); }
-.icon-card .card-icon-area--yellow { background: rgba(244,215,88,0.12); }
-.icon-card .card-icon-area--red { background: rgba(232,74,95,0.06); }
+.icon-card .card-icon-area--blue { background: rgba(47,65,86,0.06); }
+.icon-card .card-icon-area--yellow { background: rgba(184,155,108,0.12); }
+.icon-card .card-icon-area--red { background: rgba(165,80,58,0.06); }
 .icon-card .card-content {
   flex: 1;
   padding: 18px 16px;
@@ -323,7 +323,7 @@
 .quote-handwrite {
   position: relative;
   padding: 28px 24px;
-  border: 2px dashed rgba(43,127,216,0.25);
+  border: 2px dashed rgba(47,65,86,0.25);
   border-radius: 12px;
   background: white;
 }
@@ -379,7 +379,7 @@
   font-weight: 900;
   margin-bottom: 12px;
   display: inline;
-  background: linear-gradient(to top, rgba(244,215,88,0.5) 45%, transparent 45%);
+  background: linear-gradient(to top, rgba(184,155,108,0.5) 45%, transparent 45%);
   line-height: 1.8;
   padding: 2px 4px;
 }
@@ -472,7 +472,7 @@
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4156);
   opacity: 0.3;
   display: block;
   margin-bottom: 0.25rem;
@@ -516,20 +516,20 @@
   margin-bottom: 2rem;
 }
 .quote-minimal .quote-body .hl {
-  background: linear-gradient(transparent 60%, rgba(244,215,88,0.3) 60%);
+  background: linear-gradient(transparent 60%, rgba(184,155,108,0.3) 60%);
   padding: 0 4px;
 }
 .quote-minimal .quote-rule {
   width: 60px;
   height: 3px;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #B89B6C);
   margin-bottom: 2rem;
 }
 .quote-minimal .quote-conclusion {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.2rem;
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4156);
   line-height: 1.7;
 }
 ```
@@ -551,7 +551,7 @@
   padding: 24px 28px;
   background: white;
   border-radius: 10px;
-  border: 1.5px dashed rgba(43, 127, 216, 0.3);
+  border: 1.5px dashed rgba(47, 65, 86, 0.3);
 }
 .quote-note-tag {
   position: absolute;
@@ -559,7 +559,7 @@
   left: 20px;
   font-family: 'Caveat', cursive;
   font-size: 1rem;
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4156);
   background: var(--cream, #fefcf6);
   padding: 0 8px;
   font-weight: 700;
@@ -596,7 +596,7 @@
   transform: translateY(-50%);
   width: 3px;
   height: 60%;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #B89B6C);
   border-radius: 2px;
 }
 .quote-typo p {
@@ -752,7 +752,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(232,74,95,0.2);
+  background: rgba(165,80,58,0.2);
 }
 .code-notebook .code-tab {
   padding: 8px 16px 8px 48px;
@@ -770,7 +770,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   margin: 0;
   padding: 16px 20px 16px 48px;
   background-image: repeating-linear-gradient(
-    transparent, transparent 31px, rgba(43,127,216,0.05) 31px, rgba(43,127,216,0.05) 32px
+    transparent, transparent 31px, rgba(47,65,86,0.05) 31px, rgba(47,65,86,0.05) 32px
   );
 }
 ```
@@ -875,7 +875,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 .code-clean .str { color: var(--red); }
 .code-clean .cm { color: #94a3b8; }
 .code-clean .highlight-line {
-  background: rgba(43,127,216,0.06);
+  background: rgba(47,65,86,0.06);
   margin: 0 -32px;
   padding: 0 32px;
   border-left: 3px solid var(--blue);
@@ -901,14 +901,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   padding: 36px 40px;
   background: var(--cream, #fefcf6);
   border-radius: 16px;
-  border: 2px solid var(--yellow, #F4D758);
+  border: 2px solid var(--yellow, #B89B6C);
   position: relative;
 }
 .viral-pullquote::before {
   content: '"';
   font-family: 'Fraunces', serif;
   font-size: 5rem;
-  color: var(--yellow, #F4D758);
+  color: var(--yellow, #B89B6C);
   position: absolute;
   top: -10px; left: 20px;
   opacity: 0.5;
@@ -950,13 +950,13 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   line-height: 1.6;
 }
 .chat-bubble.user {
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #B89B6C);
   color: var(--ink, #1A1A2E);
   align-self: flex-end;
   border-bottom-right-radius: 4px;
 }
 .chat-bubble.ai {
-  background: var(--blue, #2B7FD8);
+  background: var(--blue, #2F4156);
   color: #fefcf6;
   align-self: flex-start;
   border-bottom-left-radius: 4px;
@@ -981,7 +981,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   font-family: 'Fraunces', serif;
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4156);
   opacity: 0.15;
   line-height: 0.85;
   display: block;
@@ -1041,7 +1041,7 @@ nav.scrolled {
   position: absolute;
   bottom: -4px; left: 0; right: 0;
   height: 2px;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #B89B6C);
   transform: scaleX(0);
   transition: transform .25s ease-out;
 }
@@ -1102,9 +1102,9 @@ nav.scrolled {
   line-height: 1;
   pointer-events: none;
 }
-.chair-number-card:nth-child(1) .chair-big-num { color: rgba(43,127,216,0.08); }
-.chair-number-card:nth-child(2) .chair-big-num { color: rgba(244,215,88,0.15); }
-.chair-number-card:nth-child(3) .chair-big-num { color: rgba(232,74,95,0.08); }
+.chair-number-card:nth-child(1) .chair-big-num { color: rgba(47,65,86,0.08); }
+.chair-number-card:nth-child(2) .chair-big-num { color: rgba(184,155,108,0.15); }
+.chair-number-card:nth-child(3) .chair-big-num { color: rgba(165,80,58,0.08); }
 .chair-number-card h3 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.1rem;
@@ -1228,9 +1228,9 @@ nav.scrolled {
   position: relative;
   background: white;
 }
-.chair-dashed-card:nth-child(1) { border-color: rgba(43,127,216,0.3); }
-.chair-dashed-card:nth-child(2) { border-color: rgba(244,215,88,0.5); }
-.chair-dashed-card:nth-child(3) { border-color: rgba(232,74,95,0.3); }
+.chair-dashed-card:nth-child(1) { border-color: rgba(47,65,86,0.3); }
+.chair-dashed-card:nth-child(2) { border-color: rgba(184,155,108,0.5); }
+.chair-dashed-card:nth-child(3) { border-color: rgba(165,80,58,0.3); }
 .chair-dashed-card .chair-label {
   position: absolute;
   top: -10px;
@@ -1242,7 +1242,7 @@ nav.scrolled {
   padding: 0 8px;
 }
 .chair-dashed-card:nth-child(1) .chair-label { color: var(--blue); }
-.chair-dashed-card:nth-child(2) .chair-label { color: #9a8100; }
+.chair-dashed-card:nth-child(2) .chair-label { color: #8B7645; }
 .chair-dashed-card:nth-child(3) .chair-label { color: var(--red); }
 .chair-dashed-card h3 {
   font-family: 'Noto Serif SC', serif;
@@ -1292,9 +1292,9 @@ nav.scrolled {
   position: relative;
   overflow: hidden;
 }
-.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(43,127,216,0.08), rgba(43,127,216,0.02)); }
-.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(244,215,88,0.15), rgba(244,215,88,0.03)); }
-.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(232,74,95,0.08), rgba(232,74,95,0.02)); }
+.chair-gradient-card:nth-child(1) { background: linear-gradient(145deg, rgba(47,65,86,0.08), rgba(47,65,86,0.02)); }
+.chair-gradient-card:nth-child(2) { background: linear-gradient(145deg, rgba(184,155,108,0.15), rgba(184,155,108,0.03)); }
+.chair-gradient-card:nth-child(3) { background: linear-gradient(145deg, rgba(165,80,58,0.08), rgba(165,80,58,0.02)); }
 .chair-gradient-card .chair-emoji {
   font-size: 2rem;
   margin-bottom: 16px;
@@ -1402,7 +1402,7 @@ nav.scrolled {
   padding: 24px 32px;
   background: var(--cream, #fefcf6);
   border-radius: 14px;
-  border: 1px solid rgba(43, 127, 216, 0.1);
+  border: 1px solid rgba(47, 65, 86, 0.1);
 }
 .system-flow span {
   font-size: 0.9rem;
@@ -1412,7 +1412,7 @@ nav.scrolled {
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 .flow-arrow {
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4156);
   font-size: 1.2rem;
   background: transparent !important;
   box-shadow: none !important;
@@ -1752,7 +1752,7 @@ Hover时出现品牌渐变顶条。
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--yellow, #F4D758), var(--blue, #2B7FD8));
+  background: linear-gradient(90deg, var(--yellow, #B89B6C), var(--blue, #2F4156));
   opacity: 0;
   transition: opacity .3s;
 }
@@ -1800,7 +1800,7 @@ Hover时出现品牌渐变顶条。
   line-height: 1.8;
 }
 .quote-text em {
-  color: var(--yellow, #F4D758);
+  color: var(--yellow, #B89B6C);
   font-style: normal;
 }
 .quote-attr {
@@ -1835,7 +1835,7 @@ Hover时出现品牌渐变顶条。
 .ring {
   position: absolute;
   inset: -12px;
-  border: 2px dashed rgba(43,127,216,0.25);
+  border: 2px dashed rgba(47,65,86,0.25);
   border-radius: 50%;
   animation: heroSpin 20s linear infinite;
 }
@@ -1892,7 +1892,7 @@ Hover时出现品牌渐变顶条。
 }
 .filter-tag.active {
   color: #fff;
-  background: var(--blue, #2B7FD8);
+  background: var(--blue, #2F4156);
 }
 .filter-tag:hover:not(.active) {
   background: rgba(0,0,0,.1);
@@ -1936,12 +1936,12 @@ Hover时出现品牌渐变顶条。
   padding: 3px 10px;
   border-radius: 12px;
   font-size: 0.7rem;
-  background: rgba(43,127,216,0.1);
-  color: var(--blue, #2B7FD8);
+  background: rgba(47,65,86,0.1);
+  color: var(--blue, #2F4156);
   margin-bottom: 0.75rem;
 }
 .verdict {
-  border-left: 3px solid var(--blue, #2B7FD8);
+  border-left: 3px solid var(--blue, #2F4156);
   padding-left: 12px;
   font-size: 0.85rem;
   color: var(--ink-light, #4A4A5A);
@@ -2068,7 +2068,7 @@ Hover时出现品牌渐变顶条。
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  background: var(--blue, #2B7FD8);
+  background: var(--blue, #2F4156);
   color: #fff;
   border-radius: 12px;
   text-decoration: none;
@@ -2078,7 +2078,7 @@ Hover时出现品牌渐变顶条。
 }
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(43,127,216,0.3);
+  box-shadow: 0 8px 24px rgba(47,65,86,0.3);
 }
 ```
 
@@ -2134,7 +2134,7 @@ Hover时出现品牌渐变顶条。
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4156);
   opacity: 0.3;
   display: block;
   margin-bottom: 0.25rem;
@@ -2159,7 +2159,7 @@ Hover时出现品牌渐变顶条。
   font-family: 'Fraunces', serif;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
-  color: var(--blue, #2B7FD8);
+  color: var(--blue, #2F4156);
   opacity: 0.1;
   line-height: 0.85;
   display: block;
@@ -2187,7 +2187,7 @@ Hover时出现品牌渐变顶条。
   font-family: 'Fraunces', serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--yellow, #F4D758);
+  color: var(--yellow, #B89B6C);
   line-height: 1;
 }
 .editorial-col h4 {
@@ -2277,10 +2277,10 @@ Hover时出现品牌渐变顶条。
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--yellow, #F4D758);
+  background: var(--yellow, #B89B6C);
 }
-.dot-row:nth-child(2n) .dot-dim::before { background: var(--blue, #2B7FD8); }
-.dot-row:nth-child(3n) .dot-dim::before { background: var(--red, #E84A5F); }
+.dot-row:nth-child(2n) .dot-dim::before { background: var(--blue, #2F4156); }
+.dot-row:nth-child(3n) .dot-dim::before { background: var(--red, #A5503A); }
 .dot-val {
   font-size: 0.9rem;
   color: var(--ink, #1A1A2E);
@@ -2388,7 +2388,7 @@ Hover时出现品牌渐变顶条。
   color: #4A4A5A;
 }
 .ticket-vintage .airline-row .badge {
-  background: #2B7FD8;
+  background: #2F4156;
   color: #fefcf6;
   padding: 2px 8px;
   font-size: 0.65rem;
@@ -2462,7 +2462,7 @@ Hover时出现品牌渐变顶条。
   font-family: 'Fira Code', monospace;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #E84A5F;
+  color: #A5503A;
 }
 ```
 
@@ -2539,7 +2539,7 @@ Hover时出现品牌渐变顶条。
 .ticket-editorial .time-divider {
   font-family: 'Fraunces', serif;
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #F4D758;
+  color: #B89B6C;
   font-weight: 300;
 }
 .ticket-editorial .cities-line {
@@ -2562,7 +2562,7 @@ Hover时出现品牌渐变顶条。
   margin-left: 6px;
 }
 .ticket-editorial .arrow-editorial {
-  color: #2B7FD8;
+  color: #2F4156;
   font-size: 1.2rem;
 }
 .ticket-editorial .meta-strip {
@@ -2647,7 +2647,7 @@ Hover时出现品牌渐变顶条。
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #E84A5F;
+  background: #A5503A;
 }
 .ticket-minimal .min-route {
   display: flex;
@@ -3064,7 +3064,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
 }
 .news-handwrite {
   font-family: 'Caveat', cursive;
-  color: var(--red, #E84A5F);
+  color: var(--red, #A5503A);
   font-size: 1.3rem;
   transform: rotate(-2deg);
   margin-top: 12px;
@@ -3346,7 +3346,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   height: 1.2em;
 }
 .type-warn {
-  color: var(--red, #E84A5F);
+  color: var(--red, #A5503A);
   font-weight: 700;
 }
 .type-cursor {

@@ -98,9 +98,9 @@ Noto Serif SC（fallback），冲击力 |
 ### P1 封面
 - 大标题（84px）用汇文明朝体（Huiwen Mincho）关键词允许使用禅金底色强调）
 - 副标题（44px）一行
-- 圆形头像（`avatar.jpg`，120px，`border: 4px solid #F4D758`）
-- 署名「明月moon」44px + 介绍34px
-- 整体边框：`border: 28px solid #F4D758`
+- 圆形头像（`avatar.jpg`，120px，`border: 4px solid #B89B6C`）
+- 署名「MOON明月」44px + 介绍34px
+- 整体边框：`border: 28px solid #B89B6C`
 - 中间留白区域给用户放效果图/截图
 - 大面积留白
 - 宣纸纹理背景
@@ -119,8 +119,8 @@ Noto Serif SC（fallback），冲击力 |
 ### 最后一页 尾页
 
 - 金句（oversized引号装饰 `"` ，Fraunces 200px，opacity 0.15）
-- 圆形头像 + 署名「明月moon」
-- CTA：「关注 明月moon」
+- 圆形头像 + 署名「MOON明月」
+- CTA：「关注 MOON明月」
 - 一行小字：设计 · AI · 东方美学 持续记录理解世界的过程`
 - 底部品牌三色装饰条
 
@@ -147,7 +147,7 @@ Noto Serif SC（fallback），冲击力 |
 
 - 所有颜色、字体、禁忌遵守 `brand-dna.md`
 - 头像文件：`assets/avatar.jpg`
-- 署名固定为：「明月moon」
+- 署名固定为：「MOON明月」
 ## 品牌色彩系统
 
 墨青蓝 #2F4156
@@ -182,7 +182,7 @@ Noto Serif SC（fallback），冲击力 |
 - [ ] 每页是否撑满画面（内容占满1080×1440，有呼吸感但不留大片空白）
 - [ ] 页面之间排版是否有变化（不能连续3页同一layout）
 - [ ] 品牌三色比例 6:3:1
-- [ ] 头像和署名是否正确（圆形头像+「Esther不二」）
+- [ ] 头像和署名是否正确（圆形头像+「MOON明月」）
 - [ ] 导出按钮是否工作（html2canvas本地文件 + JSZip CDN、exportAll打包zip一次性下载）
 - [ ] 卡片是否居中显示（transform-origin: top center）
 - [ ] 用localhost打开测试导出（file://协议下js加载受限）

@@ -1,10 +1,10 @@
 ---
 
 name:mingyue-design-system
-description:明月Moon设计系统。用于个人品牌网站、知识库、作品集、AI产品、活动页、教程页、小红书图文等内容的统一设计语言。
+description:MOON明月设计系统。用于个人品牌网站、知识库、作品集、AI产品、活动页、教程页、小红书图文等内容的统一设计语言。
 ----------------------------------------------------------------------
 
-# 明月Moon Design System
+# MOON明月 Design System
 
 适用于：
 
@@ -100,7 +100,7 @@ brand-dna.md 永远优先
 
 ### 2. 使用场景
 
-* 明月Moon
+* MOON明月
 * 无尘阁
 * AI实验室
 * Obsidian知识库

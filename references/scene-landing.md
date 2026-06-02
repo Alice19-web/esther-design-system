@@ -8,7 +8,7 @@
 * 品牌合作宣传页
 * AI产品介绍页
 * 个人IP活动页
-* 明月Moon主题活动页
+* MOON明月主题活动页
 
 核心定位：
 
@@ -396,7 +396,7 @@ repeat(3,1fr);
 
 * 嘉宾金句
 * 品牌宣言
-* 明月Moon核心观点
+* MOON明月核心观点
 
 推荐样式：
 
@@ -496,7 +496,7 @@ DO
   font-size: 1rem;
 
   background:
-  var(--blue,#2B7FD8);
+  var(--blue,#2F4156);
 
   color: white;
 
@@ -518,7 +518,7 @@ DO
 
   box-shadow:
   0 8px 24px
-  rgba(43,127,216,.3);
+  rgba(47,65,86,.3);
 }
 ```
 
@@ -535,7 +535,7 @@ DO
 .cta-button--yellow {
 
   background:
-  var(--yellow,#F4D758);
+  var(--yellow,#B89B6C);
 
   color:
   var(--ink,#1A1A2E);
@@ -727,7 +727,7 @@ width: 100%;
 
 ---
 
-# 明月Moon署名规范
+# MOON明月署名规范
 
 适用于：
 
@@ -738,13 +738,13 @@ width: 100%;
 统一格式：
 
 ```text
-By 明月Moon
+By MOON明月
 ```
 
 或
 
 ```text
-Designed by 明月Moon
+Designed by MOON明月
 ```
 
 禁止出现：
@@ -759,7 +759,7 @@ Anonymous
 统一替换为：
 
 ```text
-明月Moon
+MOON明月
 ```
 
 ---

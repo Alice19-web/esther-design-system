@@ -178,7 +178,7 @@
   left: 50%;
   top: 0; bottom: 0;
   width: 2px;
-  background: rgba(43, 127, 216, 0.15);
+  background: rgba(47, 65, 86, 0.15);
 }
 .timeline-item {
   display: grid;

@@ -204,8 +204,8 @@ clamp(3rem, 8vw, 6rem)
     0deg,
     transparent,
     transparent 3px,
-    rgba(232, 74, 95, 0.08) 3px,
-    rgba(232, 74, 95, 0.08) 4px
+    rgba(165, 80, 58, 0.08) 3px,
+    rgba(165, 80, 58, 0.08) 4px
   );
 }
 ```
@@ -290,7 +290,7 @@ clamp(3rem, 8vw, 6rem)
 - `unobserve` after triggering（只触发一次）
 - 用 `.reveal-d1` ~ `.reveal-d5` 做 stagger（0.1s递增）
 - 尊重 `prefers-reduced-motion`
-- 选中文本高亮：`::selection { background: #F4D758; color: #1a1a1a; }`
+- 选中文本高亮：`::selection { background: #B89B6C; color: #1a1a1a; }`
 
 ### 动效原则
 - **只用 opacity + transform**，不要animate layout属性

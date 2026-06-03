@@ -118,7 +118,7 @@ Noto Serif SC（fallback），冲击力 |
 
 ### 最后一页 尾页
 
-- 金句（oversized引号装饰 `"` ，Fraunces 200px，opacity 0.15）
+- 金句（oversized引号装饰 `"` ，Cormorant Garamond 200px，opacity 0.15）
 - 圆形头像 + 署名「MOON明月」
 - CTA：「关注 MOON明月」
 - 一行小字：设计 · AI · 东方美学 持续记录理解世界的过程`

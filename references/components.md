@@ -27,7 +27,7 @@
   padding: 32px 24px 20px;
 }
 .magazine-card .card-title {
-  font-family: 'Fraunces', 'Noto Serif SC', serif;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
   font-size: 2rem;
   font-weight: 900;
   line-height: 1.15;
@@ -74,7 +74,7 @@
   position: absolute;
   top: -10px;
   right: 10px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 5.5rem;
   font-weight: 900;
   color: rgba(47, 65, 86, 0.08);
@@ -278,14 +278,14 @@
   position: absolute;
   top: 12px;
   left: 24px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 5rem;
   line-height: 1;
   color: var(--yellow);
   opacity: 0.8;
 }
 .quote-editorial .quote-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   font-weight: 700;
   font-style: italic;
@@ -469,7 +469,7 @@
 
 ```css
 .section-number {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
   color: var(--blue, #2F4156);
@@ -906,7 +906,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 .viral-pullquote::before {
   content: '"';
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 5rem;
   color: var(--yellow, #B89B6C);
   position: absolute;
@@ -978,7 +978,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 ```css
 .tip-number {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 900;
   color: var(--blue, #2F4156);
@@ -1096,7 +1096,7 @@ nav.scrolled {
   position: absolute;
   top: -15px;
   right: -5px;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 6rem;
   font-weight: 900;
   line-height: 1;
@@ -1164,14 +1164,14 @@ nav.scrolled {
   opacity: 0.1;
 }
 .chair-magazine-card .chair-num {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 0.75rem;
   font-style: italic;
   color: var(--ink-faint);
   margin-bottom: 12px;
 }
 .chair-magazine-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.4rem;
   font-weight: 900;
   line-height: 1.2;
@@ -1352,7 +1352,7 @@ nav.scrolled {
 .chair-typo-card:nth-child(2) .chair-divider { background: var(--yellow); }
 .chair-typo-card:nth-child(3) .chair-divider { background: var(--red); }
 .chair-typo-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   font-weight: 900;
   margin-bottom: 12px;
@@ -1481,7 +1481,7 @@ nav.scrolled {
 .compare-block--do .compare-header { border-color: var(--blue); }
 .compare-header .compare-icon { font-size: 1.3rem; }
 .compare-header .compare-label {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -1679,7 +1679,7 @@ Caveat字体标题 + 虚线边框，适合轻松/教程类内容。
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 2px;
@@ -2088,7 +2088,7 @@ Hover时出现品牌渐变顶条。
 
 ## 21. 对比表A：杂志Editorial对比
 
-不对称grid布局（左0.35fr 右1fr），左边放大标题区（sticky），右边每行是Fraunces大号编号+两列对比值。暖色背景，无深色。
+不对称grid布局（左0.35fr 右1fr），左边放大标题区（sticky），右边每行是Cormorant Garamond大号编号+两列对比值。暖色背景，无深色。
 
 适用场景：两个事物的对比分析、before/after、竞品对比、架构拆解类页面
 
@@ -2131,7 +2131,7 @@ Hover时出现品牌渐变顶条。
   padding: clamp(80px, 12vh, 160px) 0;
 }
 .section-editorial .section-number {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: clamp(1.4rem, 3vw, 2rem);
   color: var(--blue, #2F4156);
@@ -2156,7 +2156,7 @@ Hover时出现品牌渐变顶条。
   top: 100px;
 }
 .editorial-side .big-label {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   color: var(--blue, #2F4156);
@@ -2184,7 +2184,7 @@ Hover时出现品牌渐变顶条。
 }
 .editorial-row:last-child { border-bottom: none; }
 .editorial-num {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--yellow, #B89B6C);
@@ -2511,14 +2511,14 @@ Hover时出现品牌渐变顶条。
   margin-bottom: 24px;
 }
 .ticket-editorial .flight-no {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #4A4A5A;
 }
 .ticket-editorial .date-display {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 0.9rem;
   color: #888;
@@ -2530,14 +2530,14 @@ Hover时出现品牌渐变顶条。
   margin-bottom: 8px;
 }
 .ticket-editorial .time-big {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3.5rem, 10vw, 6rem);
   font-weight: 900;
   line-height: 0.9;
   color: #1A1A2E;
 }
 .ticket-editorial .time-divider {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 5vw, 3rem);
   color: #B89B6C;
   font-weight: 300;
@@ -2584,7 +2584,7 @@ Hover时出现品牌渐变顶条。
   color: #888;
 }
 .ticket-editorial .meta-item .value {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 0.9rem;
   font-weight: 700;
   color: #1A1A2E;
@@ -2760,7 +2760,7 @@ Hover时出现品牌渐变顶条。
   margin-bottom: 4px;
 }
 .hotel-editorial .hotel-name-en {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 0.85rem;
   color: var(--sub);
@@ -2845,7 +2845,7 @@ Hover时出现品牌渐变顶条。
 }
 .hotel-postcard .city-tag {
   display: inline-block;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -2945,7 +2945,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   line-height: 1.2;
 }
 .hotel-grid .eg-title .eg-en {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 0.75rem;
   color: var(--sub);
@@ -2981,7 +2981,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   background: var(--bg-deep);
 }
 .hotel-grid .eg-date-highlight {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--blue);
@@ -3199,7 +3199,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   color: rgba(245, 230, 211, 0.4);
 }
 .film-title {
-  font-family: 'Instrument Serif', 'Fraunces', serif;
+  font-family: 'Instrument Serif', 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-style: italic;
   margin-bottom: 1.2rem;
@@ -3264,7 +3264,7 @@ CSS Grid两栏布局、2px粗边框系统、酒店名跨列、日期蓝色大字
   z-index: 2;
 }
 .mag-title {
-  font-family: 'Playfair Display', 'Fraunces', 'Noto Serif SC', serif;
+  font-family: 'Playfair Display', 'Cormorant Garamond', 'Noto Serif SC', serif;
   font-size: clamp(3rem, 9vw, 6rem);
   font-weight: 900;
   color: #fff;

@@ -138,8 +138,8 @@
 |--------|--------|--------|
 | 中文主标题 | Huiwen Mincho（汇文明朝体） | 品牌核心字体，优先级最高 |
 | 中文标题备用 | Noto Serif SC | 无汇文明朝体时使用 |
-| 英文标题 | Fraunces | 用于标题、数字、装饰文字 |
-| 英文强调 | Fraunces Italic | 副标题、引用、强调语句 |
+| 英文标题 | Cormorant Garamond | 用于标题、数字、装饰文字 |
+| 英文强调 | Cormorant Garamond Italic | 副标题、引用、强调语句 |
 | 正文/UI | Noto Sans SC | 主要阅读字体 |
 | 系统回退 | -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif | 保证跨平台一致性 |
 | 手写装饰 | Caveat | 注释、灵感标记、旁白文字 |
@@ -172,7 +172,7 @@ clamp(3rem, 8vw, 6rem)
 5. **Step引导**: 圆形编号+虚线连接+每步说明
 6. **卡片网格**: 2~3列等宽卡片（注意：不要出现落单的孤儿卡片）
 7. **产品出血型Hero**: 左侧40%紧凑文字（大标题+描述+缩略图），右侧60%大图溢出右边界。图片用 `margin-right: -5vw; border-radius: 24px 0 0 24px`，grid: `grid-template-columns: 0.4fr 0.6fr`
-8. **条纹Editorial**: 条纹分割带（repeating-linear-gradient）做section分隔。内部左图右文，图片可加低饱和度滤镜。标题用Fraunces大号italic，正文小号无衬线
+8. **条纹Editorial**: 条纹分割带（repeating-linear-gradient）做section分隔。内部左图右文，图片可加低饱和度滤镜。标题用Cormorant Garamond大号italic，正文小号无衬线
 9. **横向滚动时间线**: flex横排 + scroll-snap + 固定宽度卡片，适合经历展示、项目历程
 10. **全宽品牌色面板**: 背景使用蓝/黄/橙纯色，文字反白。一页最多1~2个，用于打破奶白底的节奏。禁忌：不要在品牌色面板上放蓝色文字
 11. **对称双栏（Pain展示）**: `grid-template-columns: 1fr 1fr`，min-height: 100vh。左侧大字标题，右侧列表/解释。适合问题/痛点、before/after对比

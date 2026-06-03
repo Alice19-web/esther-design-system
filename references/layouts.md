@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
 }
 ```
@@ -276,7 +276,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   font-weight: 700;
   position: relative;
@@ -454,7 +454,7 @@
   box-shadow: 0 4px 20px rgba(0,0,0,.06);
 }
 .timeline-card .year {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
   color: var(--blue);
   opacity: 0.6;

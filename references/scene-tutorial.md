@@ -189,9 +189,9 @@ clamp(3rem, 8vw, 6rem)
 
 ### 可用的装饰手法
 - **虚线圆圈**: `border: 2.5px dashed var(--yellow); border-radius: 50%`，半透明，大尺寸做背景
-- **渐变光晕**: `radial-gradient(ellipse, rgba(255,217,61,0.18), transparent)` 做柔和背景
+- **渐变光晕**: `radial-gradient(ellipse, rgba(184,155,108,0.18), transparent)` 做柔和背景
 - **分割线**: `linear-gradient(90deg, transparent, var(--yellow), transparent)` 1px渐隐线
-- **高亮标记**: `background: linear-gradient(180deg, transparent 50%, rgba(255,217,61,0.35) 50%)` 文字底部高亮
+- **高亮标记**: `background: linear-gradient(180deg, transparent 50%, rgba(184,155,108,0.35) 50%)` 文字底部高亮
 - **大透明数字**: 超大字号 + `opacity: 0.12~0.2` 做section装饰
 - **SVG简笔画**: 用描边风格的简化示意图，不要写实截图
 - **左侧色条**: `border-left: 4px solid var(--yellow/blue/red)` 给卡片或引用加标识
@@ -248,7 +248,7 @@ clamp(3rem, 8vw, 6rem)
   content: '';
   position: absolute;
   inset: -6px;
-  border: 1.5px solid rgba(74, 125, 232, 0.2);
+  border: 1.5px solid rgba(47, 65, 86, 0.2);
   border-radius: 16px;
 }
 ```
